@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 require("dotenv").config()
 
-const url = process.env.MONGO_URI
+//const url = process.env.MONGO_URI
 
+const url = `mongodb+srv://${process.env.USER}:${process.env.PASS}@fullstackopen.p11mir4.mongodb.net/phonebook?retryWrites=true&w=majority&appName=FullStackOpen`
+console.log(url)
 mongoose.set('strictQuery',false)
 
 mongoose.connect(url)  

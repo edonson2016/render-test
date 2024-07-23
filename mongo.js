@@ -3,8 +3,6 @@ require("dotenv").config()
 
 const url = process.env.MONGO_URI
 
-console.log(url)
-
 mongoose.set('strictQuery',false)
 
 mongoose.connect(url)
